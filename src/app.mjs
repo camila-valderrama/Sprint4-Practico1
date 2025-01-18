@@ -16,7 +16,7 @@ const __dirname = dirname(__filename);
 app.use(express.static(join(__dirname, 'public')));
 
 // Configurar directorio de vistas y motor de plantillas
-app.set('views', join(__dirname, 'src', 'views'));
+app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //Configurar express ejs Layout
