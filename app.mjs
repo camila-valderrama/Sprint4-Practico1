@@ -6,7 +6,7 @@ import { dirname, join } from 'path';
 import expressLayouts from 'express-ejs-layouts';
 
 const app = express();
-const PORT = 3500;
+const PORT = process.env.PORT || 3500;
 
 // Simular __dirname en ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -38,6 +38,6 @@ app.use((req, res) => {
 });
 
 //Iniciar el servidor
-app.listen(PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
+app.listen(PORT, `0.0.0.0` , () => {
+    console.log(`Servidor levantado en el puerto ${PORT}, desde el servidor`);
 });
